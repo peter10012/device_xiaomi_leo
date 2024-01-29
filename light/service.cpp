@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.light@2.0-service.xiaomi_mido"
+#define LOG_TAG "android.hardware.light@2.0-service.xiaomi_leo"
 
 #include <hidl/HidlTransportSupport.h>
 
@@ -30,13 +30,15 @@ using android::OK;
 using android::sp;
 using android::status_t;
 
-int main() {
+int main()
+{
     sp<ILight> service = new Light();
 
     configureRpcThreadpool(1, true);
 
     status_t status = service->registerAsService();
-    if (status != OK) {
+    if (status != OK)
+    {
         ALOGE("Cannot register Light HAL service.");
         return 1;
     }

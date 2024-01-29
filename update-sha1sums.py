@@ -20,23 +20,23 @@ import os
 import sys
 from hashlib import sha1
 
-device='mido'
-vendor='xiaomi'
+device = "leo"
+vendor = "xiaomi"
 
-with open('proprietary-files.txt', 'r') as f:
+with open("proprietary-files.txt", "r") as f:
     lines = f.read().splitlines()
-vendorPath = '../../../vendor/' + vendor + '/' + device + '/proprietary'
+vendorPath = "../../../vendor/" + vendor + "/" + device + "/proprietary"
 needSHA1 = False
 
 
 def cleanup():
     for index, line in enumerate(lines):
         # Skip empty or commented lines
-        if len(line) == 0 or line[0] == '#' or '|' not in line:
+        if len(line) == 0 or line[0] == "#" or "|" not in line:
             continue
 
         # Drop SHA1 hash, if existing
-        lines[index] = line.split('|')[0]
+        lines[index] = line.split("|")[0]
 
 
 def update():
@@ -46,28 +46,28 @@ def update():
             continue
 
         # Check if we need to set SHA1 hash for the next files
-        if line[0] == '#':
-            needSHA1 = (' - from' in line)
+        if line[0] == "#":
+            needSHA1 = " - from" in line
             continue
 
         if needSHA1:
             # Remove existing SHA1 hash
-            line = line.split('|')[0]
+            line = line.split("|")[0]
 
-            filePath = line.split(';')[0].split(':')[-1]
-            if filePath[0] == '-':
+            filePath = line.split(";")[0].split(":")[-1]
+            if filePath[0] == "-":
                 filePath = filePath[1:]
 
-            with open(os.path.join(vendorPath, filePath), 'rb') as f:
+            with open(os.path.join(vendorPath, filePath), "rb") as f:
                 hash = sha1(f.read()).hexdigest()
 
-            lines[index] = '%s|%s' % (line, hash)
+            lines[index] = "%s|%s" % (line, hash)
 
 
-if len(sys.argv) == 2 and sys.argv[1] == '-c':
+if len(sys.argv) == 2 and sys.argv[1] == "-c":
     cleanup()
 else:
     update()
 
-with open('proprietary-files.txt', 'w') as file:
-    file.write('\n'.join(lines) + '\n')
+with open("proprietary-files.txt", "w") as file:
+    file.write("\n".join(lines) + "\n")

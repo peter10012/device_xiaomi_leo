@@ -4,19 +4,19 @@
 
 | Feature                 | Specification                     |
 | :---------------------- | :-------------------------------- |
-| CPU                     | Octa-core 2.0 GHz Cortex-A53      |
-| Chipset                 | Qualcomm MSM8953 Snapdragon 625   |
+| CPU                     | quad-core 2.0 GHz ARM® Cortex™ A57 and quad-core 1.5 GHz ARM® Cortex™ A53      |
+| Chipset                 | Qualcomm MSM8994 Snapdragon 810   |
 | GPU                     | Adreno 506                        |
-| Memory                  | 2/3/4 GB                          |
-| Shipped Android Version | 6.0.1                             |
-| Storage                 | 32/64 GB                          |
+| Memory                  | 4 GB                          |
+| Shipped Android Version | 11.0.1                             |
+| Storage                 | 64 GB                          |
 | MicroSD                 | Up to 256 GB                      |
-| Battery                 | 4100 mAh (non-removable)          |
-| Dimensions              | 151 x 76 x 8.5 mm                 |
-| Display                 | 1920x1080 pixels, 5.5 (~401 PPI)  |
-| Rear Camera             | 13 MP, LED flash                  |
-| Front Camera            | 5 MP                              |
-| Release Date            | January 2017                      |
+| Battery                 | 3090 mAh (non-removable)          |
+| Dimensions              | 151.1 x 77.6 x 6.95 mm                 |
+| Display                 | 2560x1440 pixels, 5.7"  |
+| Rear Camera             | 13.0 MP, LED flash                  |
+| Front Camera            | 4.0 MP                              |
+| Release Date            | May. 2015                      |
 
 ## Device Picture
 

@@ -32,7 +32,7 @@ $(call inherit-product, vendor/revengeos/config/common.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := leo
-PRODUCT_NAME := revengeos_mido
+PRODUCT_NAME := revengeos_leo
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi Note Pro
 PRODUCT_MANUFACTURER := Xiaomi

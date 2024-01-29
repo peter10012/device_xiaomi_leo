@@ -83,7 +83,7 @@ function blob_fixup() {
     product/lib64/libdpmframework.so)
         "${PATCHELF}" --add-needed libdpmframework_shim.so "${2}"
         ;;
-    vendor/lib/hw/camera.msm8953.so)
+    vendor/lib/hw/camera.msm8994.so)
         "${PATCHELF}" --remove-needed "libandroid.so" "${2}"
         ;;
     vendor/lib/libFaceGrade.so)

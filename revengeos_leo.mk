@@ -21,12 +21,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from leo device
 $(call inherit-product, device/xiaomi/leo/device.mk)
 
-# Inherit some common Aosp stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit some common RevengeOS stuff.
+$(call inherit-product, vendor/revengeos/config/common.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := leo
-PRODUCT_NAME := aosp_mido
+PRODUCT_NAME := revengeos_mido
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi Note Pro
 PRODUCT_MANUFACTURER := Xiaomi

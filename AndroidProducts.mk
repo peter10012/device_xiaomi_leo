@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2017-2019 The aospOS Project
+# Copyright (C) 2017-2019 The RevengeOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_leo.mk
+    $(LOCAL_DIR)/revengeos_leo.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_leo-user \
-    aosp_leo-userdebug \
-    aosp_leo-eng
+    revengeos_leo-user \
+    revengeos_leo-userdebug \
+    revengeos_leo-eng

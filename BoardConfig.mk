@@ -120,7 +120,10 @@ USE_OPENGL_RENDERER := true
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS :=  0x2000
 
 # DRM
-TARGET_ENABLE_MEDIADRM_64 := true
+persist.vendor.dpm.feature=1 \
+persist.vendor.dpmhalservice.enable=1 \
+persist.vendor.dpm.loglevel=0 \
+persist.vendor.mwqem.enable=1
 
 # Filesystem
 TARGET_USERIMAGES_USE_F2FS := true

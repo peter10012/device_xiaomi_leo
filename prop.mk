@@ -48,6 +48,10 @@ bluetooth.hfp.client=1 \
 vendor.qcom.bluetooth.soc=smd \
 ro.bluetooth.hfp.ver=1.7
 
+# Boot
+PRODUCT_PROPERTY_OVERRIDES += \
+sys.vendor.shutdown.waittime=500
+
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
 camera.display.lmax=1280x720 \
@@ -184,6 +188,7 @@ persist.vendor.radio.rat_on=combine \
 persist.vendor.radio.sib16_support=1 \
 ril.subscription.types=NV,RUIM \
 rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
+ro.telephony.iwlan_operation_mode=legacy \
 ro.telephony.call_ring.multiple=false \
 ro.telephony.default_network=22,22 \
 ro.telephony.use_old_mnc_mcc_format=true \

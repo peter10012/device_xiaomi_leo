@@ -119,7 +119,8 @@ persist.camera.sensor.debug=0 \
 persist.camera.stats.test=5 \
 vidc.enc.dcvs.extra-buff-count=2 \
 persist.camera.HAL3.enabled=1 \
-persist.camera.CDS=off
+persist.vendor.camera.CDS=off \
+persist.vendor.camera.video.CDS=off
 
 # Cne
 PRODUCT_PROPERTY_OVERRIDES += \

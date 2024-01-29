@@ -5,11 +5,6 @@
     "revision": "lineage-18.1"
   },
   {
-    "repository": "KudProject/prebuilts_clang_host_linux-x86",
-    "target_path": "prebuilts/clang/host/linux-x86/clang-r383902",
-    "revision": "r383902"
-  },
-  {
     "repository": "xiaomi-classic-dev/android_vendor_xiaomi_leo",
     "target_path": "vendor/xiaomi/leo",
     "revision": "mko-mr1"

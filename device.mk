@@ -14,7 +14,6 @@
 # limitations under the License.
 #
 
-
 $(call inherit-product, vendor/xiaomi/leo/leo-vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_mr1.mk)
 
@@ -363,10 +362,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf
-
-# Touch features
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.xiaomi_mido
 
 # Trust HAL
 PRODUCT_PACKAGES += \

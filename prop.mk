@@ -54,6 +54,7 @@ vendor.voice.voip.conc.disabled=true
 PRODUCT_PROPERTY_OVERRIDES += \
 vendor.audio.feature.snd_mon.enable=false \
 vendor.audio.feature.compr_cap.enable=false \
+vendor.audio.feature.compress_meta_data.enable=true \
 vendor.audio.feature.src_trkn.enable=true \
 vendor.audio.feature.wsa.enable=true \
 vendor.audio.feature.fluence.enable=true \

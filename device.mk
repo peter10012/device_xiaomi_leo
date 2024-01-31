@@ -18,6 +18,7 @@ $(call inherit-product, vendor/xiaomi/leo/leo-vendor.mk)
 
 # Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 25
+TARGET_BOARD_PLATFORM := msm8994
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay

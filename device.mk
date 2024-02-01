@@ -99,7 +99,7 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio@2.0-impl \
     audio.a2dp.default \
     audio.bluetooth.default \
-    audio.primary.$(TARGET_BOARD_PLATFORM) \
+    audio.primary.msm8994 \
     audio.r_submix.default \
     audio.usb.default \
     libaacwrapper \
@@ -152,7 +152,7 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    camera.$(TARGET_BOARD_PLATFORM) \
+    camera.msm8994 \
     libmm-qcamera \
     libdng_sdk.vendor \
     Snap
@@ -176,10 +176,10 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@2.0-impl-2.1 \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
-    copybit.$(TARGET_BOARD_PLATFORM) \
-    gralloc.$(TARGET_BOARD_PLATFORM) \
-    hwcomposer.$(TARGET_BOARD_PLATFORM) \
-    memtrack.$(TARGET_BOARD_PLATFORM) \
+    copybit.msm8994 \
+    gralloc.msm8994 \
+    hwcomposer.msm8994 \
+    memtrack.msm8994 \
     libdisplayconfig \
     liboverlay \
     libvulkan \
@@ -271,7 +271,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/goodix-ts.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/goodix-ts.kl \
     $(LOCAL_PATH)/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio-keys.kl \
     $(LOCAL_PATH)/keylayout/ist30xx_ts_input.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/ist30xx_ts_input.kl \
-    $(LOCAL_PATH)/keylayout/$(TARGET_BOARD_PLATFORM)-snd-card-mtp_Button_Jack.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/$(TARGET_BOARD_PLATFORM)-snd-card-mtp_Button_Jack.kl \
+    $(LOCAL_PATH)/keylayout/msm8994-snd-card-mtp_Button_Jack.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/msm8994-snd-card-mtp_Button_Jack.kl \
     $(LOCAL_PATH)/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-fpc.kl \
     $(LOCAL_PATH)/keylayout/uinput-goodix.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-goodix.kl
 
@@ -288,7 +288,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-impl \
     android.hardware.light@2.0-service \
-    lights.$(TARGET_BOARD_PLATFORM)
+    lights.msm8994
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -417,7 +417,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \
     android.hardware.thermal@1.0-service \
-    thermal.$(TARGET_BOARD_PLATFORM)
+    thermal.msm8994
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf
@@ -451,7 +451,7 @@ PRODUCT_COPY_FILES += \
 # PRODUCT_PACKAGES += \
 #     android.hardware.vr@1.0-impl \
 #     android.hardware.vr@1.0-service \
-#     vr.$(TARGET_BOARD_PLATFORM)
+#     vr.msm8994
 
 # Whitelisted apps
 PRODUCT_COPY_FILES += \

@@ -106,21 +106,10 @@ sys.vendor.shutdown.waittime=500
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
-camera.display.lmax=1280x720 \
-camera.display.umax=1920x1080 \
-camera.lowpower.record.enable=1 \
-media.camera.ts.monotonic=1 \
-persist.camera.mct.debug=0 \
-persist.camera.iface.logs=0 \
-persist.camera.imglib.logs=0 \
-persist.camera.isp.clock.optmz=0 \
-persist.camera.isp.debug=0 \
-persist.camera.sensor.debug=0 \
-persist.camera.stats.test=5 \
-vidc.enc.dcvs.extra-buff-count=2 \
-persist.camera.HAL3.enabled=1 \
-persist.vendor.camera.CDS=off \
-persist.vendor.camera.video.CDS=off
+ro.qc.sdk.sensors.gestures=true \
+ro.qc.sdk.gestures.camera=false \
+ro.qc.sdk.camera.facialproc=false \
+vidc.enc.dcvs.extra-buff-count=2
 
 # Cne
 PRODUCT_PROPERTY_OVERRIDES += \

@@ -239,6 +239,7 @@ on post-fs-data
 
 on property:sys.boot_completed=1
     write /dev/kmsg "Boot completed "
+    restart cameraserver
     #Reset read ahead for dm-0 and dm-1 to 512kb
     write /sys/block/dm-0/queue/read_ahead_kb 512
     write /sys/block/dm-1/queue/read_ahead_kb 512
@@ -253,7 +254,6 @@ on property:vendor.media.target.version=*
     setprop vendor.sys.media.target.version ${vendor.media.target.version}
 
 on property:vold.decrypt=trigger_restart_framework
-    restart vendor.camera-provider-2-4
     restart vendor.audio-hal
     restart vendor.fps_hal
     start wcnss-service
@@ -351,7 +351,7 @@ service vendor.audio-hal/vendor/bin/hw/android.hardware.audio-service
     class hal
     user audioserver
     # media gid needed for /dev/fm (radio) and for /data/misc/media (tee)
-    group audio camera drmrpc inet media mediadrm net_bt net_bt_admin net_bw_acct oem_2901 wakelock system
+    group audio drmrpc inet media mediadrm net_bt net_bt_admin net_bw_acct oem_2901 wakelock system
     capabilities BLOCK_SUSPEND SYS_NICE
     ioprio rt 4
     writepid /dev/cpuset/foreground/tasks /dev/stune/foreground/tasks

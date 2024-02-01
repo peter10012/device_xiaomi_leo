@@ -75,15 +75,16 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 BOARD_HAVE_BLUETOOTH_QCOM := true
 
 # Camera
-BOARD_QTI_CAMERA_32BIT_ONLY := true
-TARGET_TS_MAKEUP := true
-TARGET_USES_QTI_CAMERA_DEVICE := true
 USE_DEVICE_SPECIFIC_CAMERA := true
-
-# API Override
+# Force camera module to be compiled only in 32-bit mode on 64-bit systems
+# Once camera module can run in the native mode of the system (either
+# 32-bit or 64-bit), the following line should be deleted
+BOARD_QTI_CAMERA_32BIT_ONLY := true
+TARGET_USES_MEDIA_EXTENSIONS := true
+TARGET_CAMERASERVICE_CLOSES_NATIVE_HANDLES := true
+TARGET_NEEDS_LEGACY_CAMERA_HAL1_DYN_NATIVE_HANDLE := true
 TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
-    /vendor/bin/mm-qcamera-daemon=27 \
-    /system/vendor/bin/mm-qcamera-daemon=27 \
+    /system/vendor/bin/mm-qcamera-daemon=22
 
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
@@ -195,6 +196,14 @@ SELINUX_IGNORE_NEVERALLOWS := true
 include device/qcom/sepolicy-legacy/sepolicy.mk
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+
+# Shims
+TARGET_LD_SHIM_LIBS += \
+  /system/vendor/lib/hw/camera.vendor.msm8994.so|libshim_camera.so \
+  /system/vendor/lib64/libril-qc-qmi-1.so|rild_socket.so \
+  /system/vendor/lib/libmmcamera2_stats_algorithm.so|libshim_atomic.so \
+  /system/vendor/lib64/libizat_core.so|libshims_get_process_name.so \
+  /system/vendor/lib64/libril-qc-qmi-1.so|libaudioclient_shim.so
 
 # Thermal
 TARGET_THERMAL_HAL := true

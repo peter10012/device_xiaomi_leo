@@ -194,8 +194,9 @@ VENDOR_SECURITY_PATCH := 2020-01-01
 SELINUX_IGNORE_NEVERALLOWS := true
 # include device/qcom/sepolicy-legacy-um/SEPolicy.mk
 include device/qcom/sepolicy-legacy/sepolicy.mk
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
-BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+# BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
+# BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Shims
 TARGET_LD_SHIM_LIBS += \

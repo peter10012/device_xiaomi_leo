@@ -1,0 +1,3 @@
+allow untrusted_app {
+    vendor_xlat_prop
+}: file { r_file_perms };

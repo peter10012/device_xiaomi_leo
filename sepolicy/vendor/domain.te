@@ -1,2 +1,5 @@
 # Silence /dev/stune logspam
 dontaudit domain device:file w_file_perms;
+
+type vendor_dpmd,domain;
+type vendor_per_mgr, domain;

@@ -1,2 +1,4 @@
 allow rild rild_file:file r_file_perms;
+
+type qtidataservices_app, domain;
 allow rild qtidataservices_app:binder call;

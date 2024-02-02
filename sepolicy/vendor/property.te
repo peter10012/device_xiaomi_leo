@@ -1,2 +1,5 @@
 # Camera
 type vendor_camera_prop, property_type;
+
+
+vendor_restricted_prop(vendor_xlat_prop);

@@ -1,2 +1,4 @@
 type lirc_device, dev_type;
 type gx_fpd_device, dev_type;
+type cpuctl_device, dev_type;
+type alarm_device, dev_type, mlstrustedobject;

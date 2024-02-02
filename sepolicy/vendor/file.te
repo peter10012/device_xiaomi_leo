@@ -5,7 +5,7 @@ type batteryd, domain;
 type batterysecret, domain;
 
 # Camera
-type camera_socket, file_type, data_file_type;
+# type camera_socket, file_type, data_file_type;
 
 # Fingerprint
 type fpc_data_file, file_type, data_file_type, core_data_file_type;
@@ -17,10 +17,13 @@ type gx_fpd_data_file, file_type, data_file_type, core_data_file_type;
 type rild_file, file_type, vendor_file_type;
 
 # Rmt
-type debugfs_rmt, debugfs_type, fs_type;
+# type debugfs_rmt, debugfs_type, fs_type;
 
 # Sensors
 type persist_sensors_file, file_type, vendor_persist_type;
 
 # Touchscreen
 type proc_touchpanel, fs_type, sysfs_type, proc_type;
+
+
+type netd_socket, file_type, coredomain_socket;

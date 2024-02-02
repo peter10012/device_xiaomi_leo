@@ -1,1 +1,3 @@
 attribute vendor_persist_type;
+attribute untrusted_app_visible_hwservice;
+expandattribute untrusted_app_visible_hwservice false;

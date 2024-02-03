@@ -53,8 +53,8 @@
             <libhw library="offload_bundle" uuid="a0dac280-401c-11e3-9379-0002a5d5c51b"/>
         </effectProxy>
         <effect name="volume" library="bundle" uuid="119341a0-8469-11df-81f9-0002a5d5c51b"/>
+        <effectProxy name="reverb_env_aux" library="proxy" uuid="48404ac9-d202-4ccc-bf84-0002a5d5c51b">
             <libsw library="reverb" uuid="4a387fc0-8ab3-11df-8bad-0002a5d5c51b"/>
-            <libsw library="qcreverb" uuid="a8c1e5f3-293d-43cd-95ec-d5e26c02e217"/>
             <libhw library="offload_bundle" uuid="79a18026-18fd-4185-8233-0002a5d5c51b"/>
         </effectProxy>
         <effectProxy name="reverb_env_ins" library="proxy" uuid="b707403a-a1c1-4291-9573-0002a5d5c51b">

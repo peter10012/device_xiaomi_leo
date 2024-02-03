@@ -46,12 +46,16 @@ LOCAL_VENDOR_MODULE := true
 include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
-LOCAL_CHECK_ELF_FILES := false
+LOCAL_CHECK_ELF_FILES := true
 LOCAL_SRC_FILES := libaudioclient_shim.cpp
 LOCAL_MODULE := libaudioclient_shim
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_LDFLAGS := libaudioclient 
 LOCAL_SHARED_LIBRARIES :=  # android 9+, it's just for system library, not work for vendor
+LOCAL_MULTILIB := 64
+LOCAL_C_INCLUDES += frameworks/av/media/libaudioclient
+LOCAL_LDFLAGS += $(call intermediates-dir-for, SHARED_LIBRARIES, libaudioclient)/libaudioclient.so
+# LOCAL_LDFLAGS += -laudioclient
+LOCAL_ADDITIONAL_DEPENDENCIES += frameworks/av/media/libaudioclient/Android.bp
 LOCAL_VENDOR_MODULE := true
 LOCAL_PROPRIETARY_MODULE := true
 include $(BUILD_SHARED_LIBRARY)

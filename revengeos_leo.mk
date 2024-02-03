@@ -36,8 +36,8 @@ PRODUCT_NAME := revengeos_leo
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi Note Pro
 PRODUCT_MANUFACTURER := Xiaomi
-TARGET_VENDOR := Xiaomi
-BOARD_VENDOR := Xiaomi
+# TARGET_VENDOR := Xiaomi
+# BOARD_VENDOR := Xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 

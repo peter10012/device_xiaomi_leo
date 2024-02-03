@@ -14,3 +14,8 @@ allow init sysfs:file setattr;
 allow init system_file:dir { relabelfrom };
 allow init system_file:file { relabelfrom };
 allow init socket_device:sock_file { create setattr unlink };
+
+
+allow init {
+    mediacodec
+}:process signull; 

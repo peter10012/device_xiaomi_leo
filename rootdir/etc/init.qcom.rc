@@ -344,7 +344,7 @@ on charger
     setprop persist.sys.usb.config mass_storage
     start qcom-post-boot
 
-service vendor.audio-hal/vendor/bin/hw/android.hardware.audio-service
+service vendor.audio-hal /vendor/bin/hw/android.hardware.audio-service
     override
     class hal
     user audioserver

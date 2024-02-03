@@ -174,8 +174,8 @@ TARGET_PER_MGR_ENABLED := true
 
 # Power
 TARGET_PROVIDES_POWERHAL := true
-TARGET_TAP_TO_WAKE_NODE := "/sys/devices/platform/soc/78b7000.i2c/i2c-3/3-0020/input/input2/wake_gesture"
-TARGET_HAS_NO_POWER_STATS := true
+# TARGET_TAP_TO_WAKE_NODE := "/sys/devices/platform/soc/78b7000.i2c/i2c-3/3-0020/input/input2/wake_gesture"
+# TARGET_HAS_NO_POWER_STATS := true
 TARGET_USES_NON_LEGACY_POWERHAL := true
 
 # Qualcomm
